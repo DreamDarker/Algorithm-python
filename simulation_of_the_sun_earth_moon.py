@@ -47,7 +47,7 @@ plt.figure(figsize=(8,8))
 def fake_data():
     # initial of sun, earth and moon
     # simulated data: dt for time interval, G for gravity constant
-    dt = 0.001
+    dt = 0.01
     G = 6.67
     sun = Object(100,0,0,0,0,0,0)
     earth = Object(10,0,10,0,0,0,0)
@@ -73,7 +73,7 @@ def fake_data():
         #draw
         # plt.xlim((-15,15))
         # plt.ylim((-15,15))
-        # plt.plot(sun.x,sun.y,'or',markersize = 30)
+        plt.plot(sun.x,sun.y,'or',markersize = 30)
         plt.plot(earth.x,earth.y,'ob',markersize = 6)
         plt.plot(moon.x,moon.y,'og',markersize = 2)
         plt.plot(earth_path_x,earth_path_y,'-b')
@@ -122,9 +122,9 @@ def real_data():
         moon_path_y.append(moon.y)
 
         # draw
-        # plt.xlim((-1.8*(10**11),(1.8*(10**11))))
-        # plt.ylim((-1.8*(10**11),(1.8*(10**11))))
-        # plt.plot(sun.x,sun.y,'or',markersize = 20)
+        plt.xlim((-1.8*(10**11),(1.8*(10**11))))
+        plt.ylim((-1.8*(10**11),(1.8*(10**11))))
+        plt.plot(sun.x,sun.y,'or',markersize = 20)
         plt.plot(earth.x,earth.y,'ob',markersize = 6)
         plt.plot(moon.x,moon.y,'og',markersize = 2)
         plt.plot(earth_path_x,earth_path_y,'-b')
